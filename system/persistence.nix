@@ -19,6 +19,7 @@
 	  ".config/VencordDesktop"
 	  ".config/google-chrome"
 	  ".config/1Password"
+	  ".config/steamguard-cli"
 	  ".1password"
 	  ".ssh"
 	  ".local/share/PrismLauncher"

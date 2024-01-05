@@ -27,7 +27,9 @@
       d = "cycle deband";
       D = "cycle deinterlace";
       "]" = "seek 90";
-      "}" = "seek -90";
+      "[" = "seek -90";
+      "-" = "multiply speed 1/1.1"; # decrease the playback speed
+      "=" = "multiply speed 1.1"; # increase the playback speed
 
       # playlist forward and prev
       "." = "playlist-next";

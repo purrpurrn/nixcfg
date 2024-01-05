@@ -18,6 +18,27 @@
         "type": "github"
       }
     },
+    "flake-programs-sqlite": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "utils": "utils"
+      },
+      "locked": {
+        "lastModified": 1704444745,
+        "narHash": "sha256-HCCb4gyLJi1bpt7e9Guv5LZprA9S/7EUW6883WoNuSw=",
+        "owner": "wamserma",
+        "repo": "flake-programs-sqlite",
+        "rev": "fa9633c057ada758ce93199fe319a8a6037dd4fd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "wamserma",
+        "repo": "flake-programs-sqlite",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -156,6 +177,7 @@
     "root": {
       "inputs": {
         "ags": "ags",
+        "flake-programs-sqlite": "flake-programs-sqlite",
         "home-manager": "home-manager",
         "hyprland-contrib": "hyprland-contrib",
         "hyprpicker": "hyprpicker",
@@ -177,6 +199,21 @@
         "owner": "nixos",
         "ref": "nixos-23.11",
         "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "utils": {
+      "locked": {
+        "lastModified": 1678901627,
+        "narHash": "sha256-U02riOqrKKzwjsxc/400XnElV+UtPUQWpANPlyazjH0=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "93a2b84fc4b70d9e089d029deacc3583435c2ed6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
         "type": "github"
       }
     }

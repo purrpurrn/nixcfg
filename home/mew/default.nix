@@ -3,7 +3,6 @@
     ./applications/mpv.nix
     ./applications/kitty.nix
     ./applications/fish.nix
-    ./applications/nix-index.nix
     ./applications/git.nix
   ];
 
@@ -26,6 +25,7 @@
 	pkgs.swaybg
 	pkgs.vesktop
 	pkgs.kitty
+	pkgs.steamguard-cli
       ];
     };
   };

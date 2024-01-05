@@ -1,10 +1,11 @@
-{ config, pkgs, ...}: {
+{ config, pkgs, inputs, ...}: {
   imports = [
     ./hardware-configuration.nix
     ../../system
     ../../users
     # pkgs
     ../../common/optional/1password.nix
+    inputs.flake-programs-sqlite.nixosModules.programs-sqlite # command-not-found workaround
   ];
 
   networking.hostName = "nos";
