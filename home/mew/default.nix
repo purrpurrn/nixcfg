@@ -1,17 +1,19 @@
 { inputs, pkgs, config, lib, ... }: {
   imports = [
-    ./applications/mpv.nix
+    ./applications/mpv/default.nix
     ./applications/kitty.nix
     ./applications/fish.nix
     ./applications/git.nix
     ./applications/nixvim.nix
+    ./applications/bubblewrapper/default.nix
+    ./applications/bubblewrapper/vesktop.nix
+    ./applications/bubblewrapper/chrome.nix
+#    ./applications/bubblewrapper/1password.nix
 #    ./applications/hyprland.nix  
     ./gtk.nix
   ];
 
   config = {
-    programs.command-not-found.enable = lib.mkForce false;
-
     home = {
       username = "mew";
       homeDirectory = "/home/mew";
@@ -27,6 +29,7 @@
 	pkgs.prismlauncher
 	pkgs.swaybg
 	pkgs.vesktop
+	pkgs.firefox
 	pkgs.kitty
 	pkgs.steamguard-cli
 	pkgs.fzy

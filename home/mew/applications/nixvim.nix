@@ -5,6 +5,7 @@
   config = {
     programs.nixvim = {
       enable = true;
+      colorschemes.gruvbox.enable = true;
       keymaps = [
         {
           key = "<leader>ff";
@@ -29,13 +30,26 @@
         clipboard = "unnamedplus";
 	undofile = true;
 	termguicolors = true;
+        signcolumn = "no";
       };
       plugins = {
         lightline.enable = true;
 	treesitter.enable = true;
         trouble.enable = true;
 	telescope.enable = true;
+	neo-tree.enable = true;
+	image.enable = true;
+	lsp = {
+          enable = true;
+	  servers = {
+            #tsserver = true; # javascript
+	    nil_ls.enable = true; # nix programming language
+	  };
+	};
       };
+      extraPlugins = with pkgs.vimPlugins; [
+        nvim-web-devicons
+      ];
     };
   };
 }

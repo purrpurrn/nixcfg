@@ -25,6 +25,7 @@
     split-monitor-workspaces.inputs.nixpkgs.follows = "hyprland";
 
     impermanence.url = "github:nix-community/impermanence";
+    bubblewrapper.url = "git+https://git.sr.ht/~cid-chan/bubblewrapper?ref=main";
 
     ags.url = "github:aylur/ags";
     matugen.url = "github:InioX/matugen";

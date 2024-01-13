@@ -18,6 +18,25 @@
         "type": "github"
       }
     },
+    "bubblewrapper": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1702147901,
+        "narHash": "sha256-zmqbweC/iNP7KqOCk27Zfane0r7kQf0g9FKLr1j6Gxk=",
+        "ref": "main",
+        "rev": "7d4fef8418584c81506644ae64d089dc3bdda5b1",
+        "revCount": 13,
+        "type": "git",
+        "url": "https://git.sr.ht/~cid-chan/bubblewrapper"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "https://git.sr.ht/~cid-chan/bubblewrapper"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -183,7 +202,7 @@
     },
     "hyprland-contrib": {
       "inputs": {
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_4"
       },
       "locked": {
         "lastModified": 1704293951,
@@ -254,7 +273,7 @@
     "hyprland_2": {
       "inputs": {
         "hyprland-protocols": "hyprland-protocols_2",
-        "nixpkgs": "nixpkgs_7",
+        "nixpkgs": "nixpkgs_8",
         "systems": "systems_3",
         "wlroots": "wlroots_2",
         "xdph": "xdph_2"
@@ -275,7 +294,7 @@
     },
     "hyprlang": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
         "lastModified": 1704287638,
@@ -293,7 +312,7 @@
     },
     "hyprpicker": {
       "inputs": {
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": "nixpkgs_5"
       },
       "locked": {
         "lastModified": 1703987863,
@@ -326,7 +345,7 @@
     },
     "matugen": {
       "inputs": {
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_6"
       },
       "locked": {
         "lastModified": 1704390086,
@@ -396,6 +415,20 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1652574577,
+        "narHash": "sha256-MoSWPtue4Wi9+kRDxUbLWEBCL8Bswaa8kVMh2JYpSJg=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "118ec238bfb788a34f1d53c4d95931fadfa70367",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1702645756,
         "narHash": "sha256-qKI6OR3TYJYQB3Q8mAZ+DG4o/BR9ptcv9UnRV2hzljc=",
         "owner": "nixos",
@@ -410,7 +443,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_3": {
+    "nixpkgs_4": {
       "locked": {
         "lastModified": 1658161305,
         "narHash": "sha256-X/nhnMCa1Wx4YapsspyAs6QYz6T/85FofrI6NpdPDHg=",
@@ -426,7 +459,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_4": {
+    "nixpkgs_5": {
       "locked": {
         "lastModified": 1683014792,
         "narHash": "sha256-6Va9iVtmmsw4raBc3QKvQT2KT/NGRWlvUlJj46zN8B8=",
@@ -442,7 +475,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_5": {
+    "nixpkgs_6": {
       "locked": {
         "lastModified": 1691186842,
         "narHash": "sha256-wxBVCvZUwq+XS4N4t9NqsHV4E64cPVqQ2fdDISpjcw0=",
@@ -458,7 +491,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_6": {
+    "nixpkgs_7": {
       "locked": {
         "lastModified": 1704194953,
         "narHash": "sha256-RtDKd8Mynhe5CFnVT8s0/0yqtWFMM9LmCzXv/YKxnq4=",
@@ -474,7 +507,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_7": {
+    "nixpkgs_8": {
       "locked": {
         "lastModified": 1693158576,
         "narHash": "sha256-aRTTXkYvhXosGx535iAFUaoFboUrZSYb1Ooih/auGp0=",
@@ -545,6 +578,7 @@
     "root": {
       "inputs": {
         "ags": "ags",
+        "bubblewrapper": "bubblewrapper",
         "flake-programs-sqlite": "flake-programs-sqlite",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
@@ -552,7 +586,7 @@
         "hyprpicker": "hyprpicker",
         "impermanence": "impermanence",
         "matugen": "matugen",
-        "nixpkgs": "nixpkgs_6",
+        "nixpkgs": "nixpkgs_7",
         "nixvim": "nixvim",
         "split-monitor-workspaces": "split-monitor-workspaces",
         "stable": "stable"

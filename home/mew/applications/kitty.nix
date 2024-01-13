@@ -16,8 +16,8 @@
         cursor_shape = "beam";
 	show_hyperlink_targets = true;
 	enable_audio_bell = false;
-	background_opacity = "0.8";
-	background_blur = "2";
+	#background_opacity = "0.8";
+	#background_blur = "2";
 	shell = "fish";
 	editor = "nvim";
 	confirm_os_window_close = "0";
