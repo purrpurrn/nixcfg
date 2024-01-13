@@ -5,7 +5,6 @@
     ../../users
     ../../common/1password.nix
     ../../common/steam.nix
-    ../../common/retroarch.nix
     inputs.flake-programs-sqlite.nixosModules.programs-sqlite # command-not-found workaround
   ];
 
@@ -44,6 +43,8 @@
     pkgs.jq
     pkgs.btop
     pkgs.htop
+    pkgs.fd
+    pkgs.ripgrep
   ];
 
   system.stateVersion = "23.05";
