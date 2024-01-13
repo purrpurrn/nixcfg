@@ -3,8 +3,9 @@
     ./hardware-configuration.nix
     ../../system
     ../../users
-    # pkgs
-    ../../common/optional/1password.nix
+    ../../common/1password.nix
+    ../../common/steam.nix
+    ../../common/retroarch.nix
     inputs.flake-programs-sqlite.nixosModules.programs-sqlite # command-not-found workaround
   ];
 
@@ -39,6 +40,10 @@
   environment.systemPackages = [ 
     pkgs.bluez 
     pkgs.libsForQt5.polkit-kde-agent
+    pkgs.killall
+    pkgs.jq
+    pkgs.btop
+    pkgs.htop
   ];
 
   system.stateVersion = "23.05";

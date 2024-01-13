@@ -4,6 +4,9 @@
     ./applications/kitty.nix
     ./applications/fish.nix
     ./applications/git.nix
+    ./applications/nixvim.nix
+#    ./applications/hyprland.nix  
+    ./gtk.nix
   ];
 
   config = {
@@ -26,7 +29,17 @@
 	pkgs.vesktop
 	pkgs.kitty
 	pkgs.steamguard-cli
+	pkgs.fzy
+	pkgs.fd
       ];
+    };
+    xdg.userDirs = {
+      enable = true;
+      pictures = "/home/mew/data/Pictures";
+      videos = "/home/mew/data/Videos";
+      extraConfig = {
+        XDG_SCREENSHOTS_DIR = "/home/mew/data/Pictures/Screenshots";
+      };
     };
   };
 }
