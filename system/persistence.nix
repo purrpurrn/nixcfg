@@ -30,6 +30,7 @@
 	  "data/Pictures"
 	  "data/Videos"
 	  "data/Games"
+	  "data/1"
 	];
       };
     };
