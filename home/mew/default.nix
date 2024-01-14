@@ -5,6 +5,7 @@
     ./applications/fish.nix
     ./applications/git.nix
     ./applications/nixvim.nix
+#    ./applications/ags.nix
     ./applications/bubblewrapper/default.nix
     ./applications/bubblewrapper/vesktop.nix
     ./applications/bubblewrapper/chrome.nix

@@ -22,7 +22,6 @@
     hyprland-contrib.url = "github:hyprwm/contrib";
 
     split-monitor-workspaces.url = "github:Duckonaut/split-monitor-workspaces";
-    split-monitor-workspaces.inputs.nixpkgs.follows = "hyprland";
 
     impermanence.url = "github:nix-community/impermanence";
     bubblewrapper.url = "git+https://git.sr.ht/~cid-chan/bubblewrapper?ref=main";
