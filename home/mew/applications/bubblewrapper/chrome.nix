@@ -9,15 +9,16 @@
       webcam = false;
       network = true;
       readWriteDirs = [
-        "/home/mew/.config/google-chrome"
-	"/home/mew/data/1"
-	"/home/mew/data/Videos"
-	"/home/mew/data/Pictures"
+        "$HOME/.config/google-chrome"
+	"$HOME/data/1"
+	"$HOME/data/Videos"
+	"$HOME/data/Pictures"
       ];
       hideDirs = [
-        "/home/mew"
+        "$HOME"
       ];
       command = "${pkgs.google-chrome}/bin/google-chrome-stable";
+      args = ["--enable-features=UseOzonePlatform --ozone-platform=wayland"]; # chrome wayland native mode
       availablePackages = [
         pkgs._1password
       ];

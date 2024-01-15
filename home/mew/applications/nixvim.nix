@@ -5,7 +5,8 @@
   config = {
     programs.nixvim = {
       enable = true;
-      colorschemes.gruvbox.enable = true;
+      colorschemes.rose-pine.enable = true;
+      colorschemes.rose-pine.transparentBackground = true;
       keymaps = [
         {
           key = "<leader>ff";
@@ -33,7 +34,10 @@
         signcolumn = "no";
       };
       plugins = {
-        lightline.enable = true;
+        lightline = {
+	  enable = true;
+	  colorscheme = "rose-pine";
+	};
 	treesitter.enable = true;
         trouble.enable = true;
 	telescope.enable = true;

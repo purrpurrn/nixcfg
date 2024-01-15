@@ -17,7 +17,7 @@
 
     hyprland.url = "github:hyprwm/hyprland";
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
-
+    prism.url = "github:IogaMaster/prism";
     hyprpicker.url = "github:hyprwm/hyprpicker";
     hyprland-contrib.url = "github:hyprwm/contrib";
 

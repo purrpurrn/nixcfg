@@ -20,6 +20,7 @@
 	  ".config/google-chrome"
 	  ".config/1Password"
 	  ".config/steamguard-cli"
+	  ".config/tofi/"
 	  ".1password"
 	  ".ssh"
 	  ".local/share/PrismLauncher"
