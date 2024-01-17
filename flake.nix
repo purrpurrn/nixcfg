@@ -37,7 +37,7 @@
     nixosConfigurations = {
       # personal laptop
       nos = nixpkgs.lib.nixosSystem {
-        modules = [ ./hosts/nos ];
+        modules = [ ./hosts/nos ./default.nix ];
         specialArgs = { inherit inputs; };
       };
     };

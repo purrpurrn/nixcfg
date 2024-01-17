@@ -49,7 +49,11 @@
     nix.settings.experimental-features = [ "nix-command" "flakes" ]; # enables flakes
     # Allows Unfree/Proprietary packages
     nixpkgs.config.allowUnfree = true;
-    nixpkgs.config.allowUnfreePredicate = _: true;
+    nixpkgs.config.allowUnfreePredicate = (_: true);
+    nixpkgs.config.permittedInsecurePackages = [
+      "electron-25.9.0"
+    ];
+    nixpkgs.config.allowBroken = true;
     environment.sessionVariables = { NIXPKGS_ALLOW_UNFREE = "1"; };
    };
 }

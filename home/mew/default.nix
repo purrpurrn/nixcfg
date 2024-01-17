@@ -13,8 +13,8 @@
     ./applications/vesktop.nix
     ./applications/chrome.nix
 #    ./applications/hyprland.nix  
+    ./applications/prism
     ./gtk.nix
-    ./prism
   ];
 
   config = {

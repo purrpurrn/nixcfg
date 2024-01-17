@@ -21,6 +21,7 @@
 	shell = "fish";
 	editor = "nvim";
 	confirm_os_window_close = "0";
+	font_features = "FiraCode +cv02 +cv05 +cv09 +cv14 +ss04 +cv16 +cv31 +cv25 +cv26 +cv32 +cv28 +ss10 +zero +onum";
       };
       theme = "Rosé Pine";
     };
