@@ -1,6 +1,7 @@
 { inputs, lib, config, pkgs, ... }: {
-   
   config = {
+    home.packages = [ pkgs.google-chrome ];
+
     security.bubblewrap.programs.google-chrome = {
       home = true;
       dbus = true;

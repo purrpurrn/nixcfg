@@ -7,45 +7,49 @@
     ../../common/steam.nix
     inputs.flake-programs-sqlite.nixosModules.programs-sqlite # command-not-found workaround
   ];
+   config = {
+     networking.hostName = "nos";
+     networking.networkmanager.enable = true;
+     systemd.services.NetworkManager-wait-online.enable = false; # reduces boot time
 
-  networking.hostName = "nos";
-  networking.networkmanager.enable = true;
-  systemd.services.NetworkManager-wait-online.enable = false;
+     security.polkit.enable = true;
 
-  security.polkit.enable = true;
+     # Bootloader
+     boot.loader.systemd-boot.enable = true;
+     boot.loader.systemd-boot.editor = false; # set to false out of security reasons
+     boot.loader.timeout = 2;
+     boot.loader.efi.canTouchEfiVariables = true; # Installation process is allowed to modify EFI boot variables.
 
-  boot.kernelPackages = pkgs.linuxPackages_zen;
-  
-  # Bootloader
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.systemd-boot.editor = false; # set to false out of security reasons
-  boot.loader.timeout = 1;
-  boot.loader.efi.canTouchEfiVariables = true; # Installation process is allowed to modify EFI boot variables.
+     boot.binfmt.emulatedSystems = ["aarch64-linux"]; # arm64 emulation
 
-  boot.binfmt.emulatedSystems = ["aarch64-linux"]; # arm64 emulation
-  
-  # Swap
-  swapDevices = [{
-    device = "/dev/nvme0n1p5";
-    randomEncryption.enable = true;
-  }];
+    environment.systemPackages = [ 
+      pkgs.bluez 
+      pkgs.libsForQt5.polkit-kde-agent
+      pkgs.killall
+      pkgs.jq
+      pkgs.btop
+      pkgs.htop
+      pkgs.fd
+      pkgs.ripgrep
+      pkgs.wget
+    ];
 
+    # Internationalisation properties
+    time.timeZone = "Europe/Berlin";
+    i18n.defaultLocale = "en_DK.UTF-8";
 
-  # Bluetooth
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
-  environment.systemPackages = [ 
-    pkgs.bluez 
-    pkgs.libsForQt5.polkit-kde-agent
-    pkgs.killall
-    pkgs.jq
-    pkgs.btop
-    pkgs.htop
-    pkgs.fd
-    pkgs.ripgrep
-  ];
+    services.printing.enable = true;
 
-  system.stateVersion = "23.05";
+    fonts.packages = [
+      pkgs.fira-code
+      pkgs.fira-code-nerdfont
+    ];
+
+    system.stateVersion = "23.05";
+    nix.settings.experimental-features = [ "nix-command" "flakes" ]; # enables flakes
+    # Allows Unfree/Proprietary packages
+    nixpkgs.config.allowUnfree = true;
+    nixpkgs.config.allowUnfreePredicate = _: true;
+    environment.sessionVariables = { NIXPKGS_ALLOW_UNFREE = "1"; };
+   };
 }

@@ -7,11 +7,11 @@
     ./applications/nixvim.nix
     ./applications/ags.nix
     ./applications/chromium.nix
-    ./applications/easyeffects.nix
+#    ./applications/easyeffects.nix
+    ./applications/hyprpaper.nix
     ./applications/bubblewrapper/default.nix
     ./applications/vesktop.nix
-    ./applications/bubblewrapper/chrome.nix
-#    ./applications/bubblewrapper/1password.nix
+    ./applications/chrome.nix
 #    ./applications/hyprland.nix  
     ./gtk.nix
     ./prism
@@ -27,26 +27,25 @@
       };
       
       packages = [
-        pkgs.google-chrome
 	pkgs.btop
 	pkgs.neofetch
 	pkgs.prismlauncher
-	pkgs.swaybg
 	pkgs.firefox
 	pkgs.kitty
 	pkgs.steamguard-cli
 	pkgs.fzy
 	pkgs.fd
-	pkgs.tofi
+	pkgs.rofi-wayland
 	pkgs.obsidian
       ];
     };
     xdg.userDirs = {
       enable = true;
-      pictures = "/home/mew/data/Pictures";
-      videos = "/home/mew/data/Videos";
+      pictures = "$HOME/data/Pictures";
+      videos = "$HOME/data/Videos";
       extraConfig = {
-        XDG_SCREENSHOTS_DIR = "/home/mew/data/Pictures/Screenshots";
+        XDG_SCREENSHOTS_DIR = "$HOME/data/Pictures/Screenshots";
+	XDG_CONFIG_HOME = "$HOME/.config";
       };
     };
   };
