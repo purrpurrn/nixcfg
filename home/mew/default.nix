@@ -38,6 +38,7 @@
 	pkgs.fzy
 	pkgs.fd
 	pkgs.tofi
+	pkgs.obsidian
       ];
     };
     xdg.userDirs = {

@@ -36,7 +36,7 @@
       plugins = {
         lightline = {
 	  enable = true;
-	  colorscheme = "rose-pine";
+	  colorscheme = "one";
 	};
 	treesitter.enable = true;
         trouble.enable = true;

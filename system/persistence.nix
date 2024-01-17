@@ -32,6 +32,7 @@
 	  "data/Videos"
 	  "data/Games"
 	  "data/1"
+	  "data/Documents"
 	];
       };
     };
