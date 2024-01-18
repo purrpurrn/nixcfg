@@ -46,7 +46,7 @@
 	lsp = {
           enable = true;
 	  servers = {
-            #tsserver = true; # javascript
+            tsserver.enable = true; # javascript & typescript
 	    nil_ls.enable = true; # nix programming language
 	  };
 	};

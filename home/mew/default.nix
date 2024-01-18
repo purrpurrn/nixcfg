@@ -1,4 +1,4 @@
-{ inputs, pkgs, config, lib, ... }: {
+{ pkgs, config, ... }: {
   imports = [
     ./applications/mpv
     ./applications/kitty.nix
@@ -37,6 +37,7 @@
 	pkgs.fd
 	pkgs.rofi-wayland
 	pkgs.obsidian
+	(pkgs.callPackage ../../common/pomo.nix {})
       ];
     };
     xdg.userDirs = {
