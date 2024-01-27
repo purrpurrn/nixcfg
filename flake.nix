@@ -41,7 +41,7 @@
       nos = nixpkgs.lib.nixosSystem {
         modules = [ 
 	  ./hosts/nos 
-	  ./default.nix
+	  ./home/users.nix
 	];
         specialArgs = { inherit inputs; };
       };

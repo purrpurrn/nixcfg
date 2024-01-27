@@ -1,11 +1,20 @@
-{ lib, config, pkgs, ... }: {
-  options = with lib; {
-    user."0" = mkOption {
-      type = types.str;
-      default = "mew";
-      description = ''
-        the name of the user 0
-      '';
+{ config, pkgs, inputs, ... }: {
+  imports = [
+    inputs.home-manager.nixosModule
+  ];
+
+  config = {
+    home-manager = {
+      extraSpecialArgs = inputs // { inherit inputs; };
+      useGlobalPkgs = true;
+
+      users = {
+        mew = { ... }: {
+          imports = [ 
+	    ./mew 
+	  ];
+        };
+      };
     };
   };
 }
