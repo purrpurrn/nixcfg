@@ -42,7 +42,6 @@
         modules = [ 
 	  ./hosts/nos 
 	  ./default.nix
-	  ./common/chromium_extraOpts.nix
 	];
         specialArgs = { inherit inputs; };
       };

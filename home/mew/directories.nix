@@ -5,6 +5,11 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/mew/data/Pictures/memes";
       target = "/home/mew/1";
     };
+    home.file."2" = {
+      enable = true;
+      source = config.lib.file.mkOutOfStoreSymlink "/home/mew/data/Pictures/memes";
+      target = "/home/mew/data/1";
+    };
     home.file."memes" = {
       enable = true;
       source = config.lib.file.mkOutOfStoreSymlink "/home/mew/data/Pictures/memes";
