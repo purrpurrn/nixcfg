@@ -28,6 +28,8 @@
 
     ags.url = "github:aylur/ags";
     matugen.url = "github:InioX/matugen";
+
+    plasma6.url = "github:nix-community/kde2nix";
   };
 
   outputs = inputs@{ self, nixpkgs, stable, home-manager, hyprpicker, hyprland-contrib, impermanence, split-monitor-workspaces, ... }: let
@@ -37,7 +39,11 @@
     nixosConfigurations = {
       # personal laptop
       nos = nixpkgs.lib.nixosSystem {
-        modules = [ ./hosts/nos ./default.nix ];
+        modules = [ 
+	  ./hosts/nos 
+	  ./default.nix
+	  ./common/chromium_extraOpts.nix
+	];
         specialArgs = { inherit inputs; };
       };
     };

@@ -1,5 +1,7 @@
 { config, pkgs, ... }: {
   config = {
+    dconf.settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+
     gtk = {
       enable = true;
       # Cursor
@@ -34,6 +36,7 @@
     home.packages = [
       pkgs.libadwaita
       pkgs.glib
+      pkgs.gnome.adwaita-icon-theme
     ];
   };
 }

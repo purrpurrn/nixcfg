@@ -1,5 +1,7 @@
 { pkgs, config, ... }: {
   imports = [
+    ./gtk.nix
+    ./directories.nix
     ./applications/mpv
     ./applications/kitty.nix
     ./applications/fish.nix
@@ -7,14 +9,13 @@
     ./applications/nixvim.nix
     ./applications/ags.nix
     ./applications/chromium.nix
-#    ./applications/easyeffects.nix
+    ./applications/easyeffects.nix
     ./applications/hyprpaper.nix
     ./applications/bubblewrapper/default.nix
-    ./applications/vesktop.nix
-    ./applications/chrome.nix
+#    ./applications/vesktop.nix
+#    ./applications/chrome.nix
 #    ./applications/hyprland.nix  
     ./applications/prism
-    ./gtk.nix
   ];
 
   config = {
@@ -37,6 +38,9 @@
 	pkgs.fd
 	pkgs.rofi-wayland
 	pkgs.obsidian
+	pkgs.yt-dlp
+	pkgs.scrcpy
+	pkgs.anki
 	(pkgs.callPackage ../../common/pomo.nix {})
       ];
     };

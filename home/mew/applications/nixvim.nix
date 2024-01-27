@@ -43,6 +43,7 @@
 	telescope.enable = true;
 	neo-tree.enable = true;
 	image.enable = true;
+	vimtex.enable = true;
 	lsp = {
           enable = true;
 	  servers = {

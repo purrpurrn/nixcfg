@@ -10,7 +10,9 @@
 
       users = {
         mew = { ... }: {
-          imports = [ ./home/mew ];
+          imports = [ 
+	    ./home/mew 
+	  ];
         };
       };
     };

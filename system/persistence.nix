@@ -16,11 +16,12 @@
         directories = [
           ".config/hypr"
           ".config/ags"
-	  ".config/VencordDesktop"
-	  ".config/google-chrome"
+	  ".config/google-chrome" # remove
+	  ".config/chromium"
 	  ".config/1Password"
 	  ".config/steamguard-cli"
 	  ".config/tofi/"
+	  ".config/obsidian"
 	  ".1password"
 	  ".ssh"
 	  ".local/share/PrismLauncher"
@@ -28,11 +29,13 @@
 	  # Fish
 	  ".local/share/fish"
 	  ".config/fish"
-	  "data/Pictures"
+	  "data/Pictures/memes"
+	  "data/Pictures/screenshots"
+	  "data/Pictures/wallpapers"
+	  "data/Pictures/other"
 	  "data/Videos"
-	  "data/Games"
-	  "data/1"
-	  "data/Documents"
+	  "data/Games/OMORI"
+	  "data/Documents/obsidian"
 	];
       };
     };
