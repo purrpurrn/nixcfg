@@ -35,6 +35,9 @@
 	  "data/Documents/obsidian"
 	  "data/Documents/pdf"
 	];
+	files = [
+          ".config/sops/age/keys.txt"
+	];
       };
     };
   };
