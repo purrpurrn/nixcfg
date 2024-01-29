@@ -16,6 +16,8 @@
         "aeblfdkhhhdcdjpifhhbdiojplfjncoa" # 1Password
         "bhchdcejhohfmigjafbampogmaanbfkg" # User-Agent Switcher and Manager
 	"edibdbjcniadpccecjdfdjjppcpchdlm" # I still don't care about cookies
+	"kbmfpngjjgdllneeigpgjifpgocmfgmb" # Reddit Enhancement Suite
+	"khncfooichmfjbepaaaebmommgaepoid" # Unhook - Remove YouTube Recommended Videos
       ];
     };
   };

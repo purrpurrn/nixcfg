@@ -1,0 +1,7 @@
+keys:
+  - &mew age1cchw6gg9xfhy9z769ppncrwrfduewyuhk0q9y262peg25fwaj5dqh92m3m
+creation_rules:
+  - path_regex: secrets/*
+    key_groups:
+    - age:
+      - *mew

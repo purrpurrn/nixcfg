@@ -26,9 +26,6 @@
 	  ".ssh"
 	  ".local/share/PrismLauncher"
 	  ".local/share/Steam"
-	  # Fish
-	  ".local/share/fish"
-	  ".config/fish"
 	  "data/Pictures/memes"
 	  "data/Pictures/screenshots"
 	  "data/Pictures/wallpapers"
@@ -36,6 +33,7 @@
 	  "data/Videos"
 	  "data/Games/OMORI"
 	  "data/Documents/obsidian"
+	  "data/Documents/pdf"
 	];
       };
     };

@@ -5,12 +5,6 @@
       interactiveShellInit = ''
         set -g fish_greeting
       '';
-      plugins = [
-         {
-           name = "tide";
-	   src = pkgs.fishPlugins.tide.src;
-	 }
-      ];
     };
   };
 }

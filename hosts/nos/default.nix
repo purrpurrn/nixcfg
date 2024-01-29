@@ -1,14 +1,26 @@
 { config, pkgs, inputs, ...}: {
   imports = [
     ./hardware-configuration.nix
+    ./persistence.nix
     ../../system
-    ../../users
+    ../../users/mew.nix
     ../../common/1password.nix
     ../../common/steam.nix
     ../../common/gtk.nix
     inputs.flake-programs-sqlite.nixosModules.programs-sqlite # command-not-found workaround
   ];
    config = {
+     # Auto Updates
+     system.autoUpgrade = {
+       enable = true;
+       flake = inputs.self.outPath;
+       dates = "02:00";
+       flags = [
+         "--update-input"
+	 "nixpkgs"
+       ];
+     };
+
      networking.hostName = "nos";
      networking.networkmanager.enable = true;
      systemd.services.NetworkManager-wait-online.enable = false; # reduces boot time
@@ -23,6 +35,13 @@
 
      boot.binfmt.emulatedSystems = ["aarch64-linux"]; # arm64 emulation
 
+     #xdg.portal = {
+     #  enable = true;
+     #  extraPortals = [
+     #    pkgs.xdg-desktop-portal-gtk
+     #  ];
+     #};
+
     environment.systemPackages = [ 
       pkgs.bluez 
       pkgs.libsForQt5.polkit-kde-agent
@@ -32,7 +51,6 @@
       pkgs.htop
       pkgs.fd
       pkgs.ripgrep
-      pkgs.wget
     ];
 
     # Internationalisation properties

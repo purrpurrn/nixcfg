@@ -2,7 +2,6 @@
 {
   imports = [
     ./pkgs
-    ./persistence.nix
   ];
 
   config = {

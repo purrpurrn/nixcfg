@@ -5,6 +5,7 @@
     ./applications/mpv
     ./applications/kitty.nix
     ./applications/fish.nix
+    ./applications/nushell.nix
     ./applications/git.nix
     ./applications/nixvim.nix
     ./applications/ags.nix
@@ -32,6 +33,7 @@
 	pkgs.neofetch
 	pkgs.prismlauncher
 	pkgs.firefox
+	pkgs.krita
 	pkgs.kitty
 	pkgs.steamguard-cli
 	pkgs.fzy

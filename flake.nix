@@ -25,11 +25,13 @@
 
     impermanence.url = "github:nix-community/impermanence";
     bubblewrapper.url = "git+https://git.sr.ht/~cid-chan/bubblewrapper?ref=main";
+    sops-nix.url = "github:Mic92/sops-nix";
 
     ags.url = "github:aylur/ags";
     matugen.url = "github:InioX/matugen";
 
-    plasma6.url = "github:nix-community/kde2nix";
+    niri.url = "github:sodiboo/niri-flake";
+    #niri.url = "github:YaLTeR/niri";
   };
 
   outputs = inputs@{ self, nixpkgs, stable, home-manager, hyprpicker, hyprland-contrib, impermanence, split-monitor-workspaces, ... }: let
@@ -42,6 +44,7 @@
         modules = [ 
 	  ./hosts/nos 
 	  ./home/users.nix
+	  ./common/sops.nix
 	];
         specialArgs = { inherit inputs; };
       };
