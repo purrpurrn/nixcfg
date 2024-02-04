@@ -2,11 +2,11 @@
   imports = [
     ./hardware-configuration.nix
     ./persistence.nix
-    ../../system
     ../../users/mew.nix
     ../../common/1password.nix
     ../../common/steam.nix
     ../../common/gtk.nix
+    ../../common/hyprland.nix
     inputs.flake-programs-sqlite.nixosModules.programs-sqlite # command-not-found workaround
   ];
    config = {

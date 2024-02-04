@@ -3,6 +3,8 @@
   imports = [ inputs.impermanence.nixosModule ];
 
   config = {
+    users.mutableUsers = false;
+
     environment.persistence."/nix/persist" = {
       hideMounts = true; # hides whitelisted directories and files from commmands like "lsblk".
       directories = [
@@ -22,10 +24,12 @@
 	  ".config/steamguard-cli"
 	  ".config/tofi/"
 	  ".config/obsidian"
+	  ".config/sops/age"
 	  ".1password"
 	  ".ssh"
 	  ".local/share/PrismLauncher"
 	  ".local/share/Steam"
+	  ".local/share/Anki2"
 	  "data/Pictures/memes"
 	  "data/Pictures/screenshots"
 	  "data/Pictures/wallpapers"
@@ -36,7 +40,8 @@
 	  "data/Documents/pdf"
 	];
 	files = [
-          ".config/sops/age/keys.txt"
+          ".config/mpv/memo-history.log"
+	  ".config/sops/age/keys.txt"
 	];
       };
     };

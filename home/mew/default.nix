@@ -1,9 +1,10 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, inputs, ... }: {
   imports = [
     ./gtk.nix
     ./directories.nix
     ./applications/mpv
     ./applications/kitty.nix
+    ./applications/zsh.nix
     ./applications/fish.nix
     ./applications/nushell.nix
     ./applications/git.nix
@@ -29,6 +30,10 @@
       };
       
       packages = [
+        pkgs.blender
+        pkgs.wl-clipboard
+        inputs.hyprland-contrib.packages."x86_64-linux".grimblast 
+        inputs.hyprpicker.packages."x86_64-linux".hyprpicker
 	pkgs.btop
 	pkgs.neofetch
 	pkgs.prismlauncher
@@ -54,6 +59,10 @@
         XDG_SCREENSHOTS_DIR = "$HOME/data/Pictures/Screenshots";
 	XDG_CONFIG_HOME = "$HOME/.config";
       };
+    };
+
+    xdg.mimeApps = {
+      enable = true;
     };
   };
 }

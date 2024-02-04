@@ -3,6 +3,8 @@
     enable = true;
     
     bindings = {
+      h = "script-binding memo-history";
+
       # uosc subtitles
       v = "script-message-to uosc subtitles";
       V = "cycle sub-visibility";
@@ -22,8 +24,8 @@
       # misc
       "Shift+ESC" = "quit";
       U = "cycle sub-ass-vsfilter-aspect-compat"; # toggle stretching SSA/ASS subtitles with anamorphic videos to match the historical rendere cycle deband
-      t = "cycle ontop";
-      T = "script-binding webtorrent/toggle-info"; # torrent file seeding and download info
+      T = "cycle ontop";
+      t = "script-binding toggle-seeker"; # seek to XX:XX
       d = "cycle deband";
       D = "cycle deinterlace";
       "]" = "seek 90";
@@ -81,25 +83,17 @@
       # Subtitles & Audio
       demuxer-mkv-subtitle-preroll = true;
       sub-auto = "fuzzy";
-      slang = [ 
-        "de"
-	"deDE"
-	"ger"
-	"deu"
-	"en"
-	"enEN"
-	"eng" ];
-      alang = [ 
-        "de"
-        "deDE"
-        "ger"
-	"jp"
-        "jpn"
-        "jap"
-        "en"
-        "enEN"
-        "eng"
-      ];
+      screenshot-directory = "~/data/Pictures/screenshots";
+      slang = [ "de" "deDE" "ger" "deu" "en" "enEN" "eng" ];
+      alang = [ "de" "deDE" "ger" "jp" "jpn" "jap" "en" "enEN" "eng" ];
+
+      # Subtitle Styling
+      sub-font = "Arial";
+      sub-bold = true;
+      sub-margin-y = 40;
+      sub-border-size = 4.0;
+      sub-border-color = "#000000";
+      sub-font-size = 46;
     };
 
     scripts = with pkgs.mpvScripts; [
@@ -111,6 +105,7 @@
       thumbfast
       webtorrent-mpv-hook
       blacklistExtensions
+      (pkgs.callPackage ./memo.nix {})
     ];
     scriptOpts = {
       blacklist_extensions = {
@@ -135,6 +130,9 @@
 	proximity_out = 35;
 	autohide = true; # autohide uosc ui if mouse autohides.
 	disable_elements = "volume, pause_indicator, speed";
+      };
+      webtorrent = {
+        path = "memory";
       };
     };
 

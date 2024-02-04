@@ -4,7 +4,7 @@
       uid = 1001;
       isNormalUser = true;
       home = "/home/mew";
-      hashedPasswordFile = config.sops.secrets.mew_password.path;
+      hashedPassword = "$y$j9T$4hemAQtx7ejdYLhw6yohh/$YO.M0SV7GCOF1fqGGZOXQhxA6lFemZxjZdPzXrTttf0";
       extraGroups = [
         "wheel"
       ];

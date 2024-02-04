@@ -1,10 +1,9 @@
 { fetchFromGitHub
 , lib
-, stdenvNoCC
-, unstableGitUpdater
+, stdenv
 }:
 
-stdenvNoCC.mkDerivation {
+stdenv.mkDerivation {
   pname = "evafast";
   version = "2022-10-11";
 
@@ -12,18 +11,17 @@ stdenvNoCC.mkDerivation {
     owner = "po5";
     repo = "evafast";
     rev = "f9ee7e41dedf0f65186900e0ccdd6ca6a8ced7ed";
-    hash = "1wn2ngcvn7wcsl3kmj782x5q9130qw951lj6ilrkafp6q6zscpqr";
+    sha256 = "1wn2ngcvn7wcsl3kmj782x5q9130qw951lj6ilrkafp6q6zscpqr";
   };
-  passthru.updateScript = unstableGitUpdater {};
-
-  dontBuild = true;
 
   installPhase = ''
     mkdir -p $out/share/mpv/scripts
-    cp -r evafast.lua $out/share/mpv/scripts/
+    cp -r evafast.lua $out/share/mpv/scripts
   '';
 
-  passthru.scriptName = "evafast.nix";
+  dontBuild = true;
+
+  passthru.scriptName = "evafast.lua";
 
  # meta = with lib; {
  #   description = "Fast-forwarding and seeking on a single key, with quality of life features like a slight slowdown when subtitles are shown.":
