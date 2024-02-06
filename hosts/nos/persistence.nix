@@ -30,6 +30,7 @@
 	  ".local/share/PrismLauncher"
 	  ".local/share/Steam"
 	  ".local/share/Anki2"
+	  ".local/state/mpv/watch_later"
 	  "data/Pictures/memes"
 	  "data/Pictures/screenshots"
 	  "data/Pictures/wallpapers"
@@ -38,10 +39,11 @@
 	  "data/Games/OMORI"
 	  "data/Documents/obsidian"
 	  "data/Documents/pdf"
+	  "data/Videos/mpv_clips"
 	];
 	files = [
           ".config/mpv/memo-history.log"
-	  ".config/sops/age/keys.txt"
+	  #".config/sops/age/keys.txt"
 	];
       };
     };

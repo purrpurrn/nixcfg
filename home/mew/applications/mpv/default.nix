@@ -120,6 +120,8 @@
       };
       webm = {
         keybind = "a";
+	output_directory = "~/data/Videos/mpv_clips";
+	output_format = "webm-vp9";
 	target_filesize = 25000;
 	crf = 30;
       };

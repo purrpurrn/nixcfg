@@ -28,6 +28,7 @@
     impermanence.url = "github:nix-community/impermanence";
     agenix.url = "github:ryantm/agenix";
     bubblewrapper.url = "git+https://git.sr.ht/~cid-chan/bubblewrapper?ref=main";
+    sops-nix.url = "github:Mic92/sops-nix";
 
     ags.url = "github:aylur/ags";
     matugen.url = "github:InioX/matugen";

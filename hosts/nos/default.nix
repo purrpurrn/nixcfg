@@ -7,6 +7,7 @@
     ../../common/steam.nix
     ../../common/gtk.nix
     ../../common/hyprland.nix
+#    ../../common/sops.nix
     inputs.flake-programs-sqlite.nixosModules.programs-sqlite # command-not-found workaround
   ];
    config = {

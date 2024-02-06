@@ -427,7 +427,7 @@
     "hyprland_2": {
       "inputs": {
         "hyprland-protocols": "hyprland-protocols_2",
-        "nixpkgs": "nixpkgs_9",
+        "nixpkgs": "nixpkgs_10",
         "systems": "systems_5",
         "wlroots": "wlroots_2",
         "xdph": "xdph_2"
@@ -605,6 +605,38 @@
         "type": "github"
       }
     },
+    "nixpkgs-stable": {
+      "locked": {
+        "lastModified": 1705957679,
+        "narHash": "sha256-Q8LJaVZGJ9wo33wBafvZSzapYsjOaNjP/pOnSiKVGHY=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "9a333eaa80901efe01df07eade2c16d183761fa3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "release-23.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_10": {
+      "locked": {
+        "lastModified": 1693158576,
+        "narHash": "sha256-aRTTXkYvhXosGx535iAFUaoFboUrZSYb1Ooih/auGp0=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "a999c1cc0c9eb2095729d5aa03e0d8f7ed256780",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1705496572,
@@ -717,16 +749,16 @@
     },
     "nixpkgs_9": {
       "locked": {
-        "lastModified": 1693158576,
-        "narHash": "sha256-aRTTXkYvhXosGx535iAFUaoFboUrZSYb1Ooih/auGp0=",
+        "lastModified": 1706925685,
+        "narHash": "sha256-hVInjWMmgH4yZgA4ZtbgJM1qEAel72SYhP5nOWX4UIM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "a999c1cc0c9eb2095729d5aa03e0d8f7ed256780",
+        "rev": "79a13f1437e149dc7be2d1290c74d378dad60814",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-unstable",
+        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -819,6 +851,7 @@
         "nixpkgs": "nixpkgs_7",
         "nixvim": "nixvim",
         "prism": "prism",
+        "sops-nix": "sops-nix",
         "split-monitor-workspaces": "split-monitor-workspaces",
         "stable": "stable"
       }
@@ -843,6 +876,25 @@
       "original": {
         "owner": "snowfallorg",
         "repo": "lib",
+        "type": "github"
+      }
+    },
+    "sops-nix": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_9",
+        "nixpkgs-stable": "nixpkgs-stable"
+      },
+      "locked": {
+        "lastModified": 1707015547,
+        "narHash": "sha256-YZr0OrqWPdbwBhxpBu69D32ngJZw8AMgZtJeaJn0e94=",
+        "owner": "Mic92",
+        "repo": "sops-nix",
+        "rev": "23f61b897c00b66855074db471ba016e0cda20dd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mic92",
+        "repo": "sops-nix",
         "type": "github"
       }
     },
