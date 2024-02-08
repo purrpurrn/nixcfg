@@ -3,21 +3,22 @@
     ./gtk.nix
     ./directories.nix
     ./applications/mpv
-    ./applications/kitty.nix
+    ./applications/prism
+    ./applications/chromium
+    ./applications/bubblewrapper
+    ./applications/git.nix
+    ./applications/ags.nix
     ./applications/zsh.nix
     ./applications/fish.nix
-    ./applications/nushell.nix
-    ./applications/git.nix
+    ./applications/btop.nix
+    ./applications/kitty.nix
     ./applications/nixvim.nix
-    ./applications/ags.nix
-    ./applications/chromium.nix
-    ./applications/easyeffects.nix
+    ./applications/nushell.nix
     ./applications/hyprpaper.nix
-    ./applications/bubblewrapper/default.nix
+    ./applications/easyeffects.nix
 #    ./applications/vesktop.nix
 #    ./applications/chrome.nix
 #    ./applications/hyprland.nix  
-    ./applications/prism
   ];
 
   config = {
@@ -30,11 +31,11 @@
       };
       
       packages = [
+        pkgs.ff2mpv
         pkgs.blender
         pkgs.wl-clipboard
         inputs.hyprland-contrib.packages."x86_64-linux".grimblast 
         inputs.hyprpicker.packages."x86_64-linux".hyprpicker
-	pkgs.btop
 	pkgs.neofetch
 	pkgs.prismlauncher
 	pkgs.firefox

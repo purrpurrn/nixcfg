@@ -1,4 +1,7 @@
 { config, pkgs, ... }: {
+  imports = [
+    ./NativeMessagingHosts.nix
+  ];
   config = {
     programs.chromium = {
       enable = true;
@@ -18,6 +21,7 @@
 	"edibdbjcniadpccecjdfdjjppcpchdlm" # I still don't care about cookies
 	"kbmfpngjjgdllneeigpgjifpgocmfgmb" # Reddit Enhancement Suite
 	"khncfooichmfjbepaaaebmommgaepoid" # Unhook - Remove YouTube Recommended Videos
+	"ephjcajbkgplkjmelpglennepbpmdpjg" # ff2mpv
       ];
     };
   };
