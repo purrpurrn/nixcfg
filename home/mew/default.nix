@@ -14,6 +14,7 @@
     ./applications/fish.nix
     ./applications/btop.nix
     ./applications/kitty.nix
+    ./applications/discord.nix
     ./applications/nushell.nix
     ./applications/hyprlock.nix
     ./applications/hypridle.nix
