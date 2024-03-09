@@ -5,6 +5,7 @@
       isNormalUser = true;
       home = "/home/mew";
       hashedPassword = "$y$j9T$4hemAQtx7ejdYLhw6yohh/$YO.M0SV7GCOF1fqGGZOXQhxA6lFemZxjZdPzXrTttf0";
+#      hashedPasswordFile = config.age.secrets.mew_password.path;
       extraGroups = [
         "wheel"
       ];

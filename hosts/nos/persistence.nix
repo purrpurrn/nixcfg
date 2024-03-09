@@ -25,6 +25,7 @@
 	  ".config/tofi/"
 	  ".config/obsidian"
 	  ".config/sops/age"
+	  ".config/heroic"
 	  ".1password"
 	  ".ssh"
 	  ".local/share/PrismLauncher"
@@ -36,14 +37,20 @@
 	  "data/Pictures/wallpapers"
 	  "data/Pictures/other"
 	  "data/Videos"
+	  "data/recordings"
 	  "data/Games/OMORI"
+	  "data/Games/Heroic"
 	  "data/Documents/obsidian"
 	  "data/Documents/pdf"
+	  "data/Documents/nixpkgs"
+	  "data/Documents/dolis"
+	  "data/Documents/misc"
+	  "data/Documents/cooklang"
 	  "data/Videos/mpv_clips"
 	];
 	files = [
           ".config/mpv/memo-history.log"
-	  #".config/sops/age/keys.txt"
+#	  ".config/sops/age/keys.txt"
 	];
       };
     };

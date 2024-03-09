@@ -84,16 +84,34 @@
       demuxer-mkv-subtitle-preroll = true;
       sub-auto = "fuzzy";
       screenshot-directory = "~/data/Pictures/screenshots";
-      slang = [ "de" "deDE" "ger" "deu" "en" "enEN" "eng" ];
-      alang = [ "de" "deDE" "ger" "jp" "jpn" "jap" "en" "enEN" "eng" ];
+      slang = [ 
+        "de" 
+        "deDE" 
+	"ger"
+	"deu"
+	"en"
+	"enEN"
+	"eng" 
+      ];
+      alang = [ 
+        "de"
+	"deDE"
+	"ger"
+	"jp"
+	"jpn"
+	"jap"
+	"en"
+	"enEN"
+	"eng" 
+      ];
 
       # Subtitle Styling
-      sub-font = "Arial";
+      sub-font = "Candara";
       sub-bold = true;
       sub-margin-y = 40;
-      sub-border-size = 4.0;
-      sub-border-color = "#000000";
-      sub-font-size = 46;
+      sub-border-size = 3.0;
+      sub-border-color = "#0a0a0a";
+      sub-font-size = 55;
     };
 
     scripts = with pkgs.mpvScripts; [
@@ -105,7 +123,7 @@
       thumbfast
       webtorrent-mpv-hook
       blacklistExtensions
-      (pkgs.callPackage ./memo.nix {})
+      (pkgs.callPackage ./memo.nix { inherit buildLua; })
     ];
     scriptOpts = {
       blacklist_extensions = {
@@ -134,7 +152,7 @@
 	disable_elements = "volume, pause_indicator, speed";
       };
       webtorrent = {
-        path = "memory";
+        path = "/tmp";
       };
     };
 

@@ -1,8 +1,8 @@
 { config, pkgs, ... }: {
   config = {
-    home.file."ff2mpv-chromium.json" = {
+    xdg.configFile."ff2mpv-chromium.json" = {
       enable = true;
-      target = "/home/mew/.config/chromium/NativeMessagingHosts/ff2mpv.json";
+      target = "chromium/NativeMessagingHosts/ff2mpv.json";
       text = ''
         {
           "name": "ff2mpv",

@@ -18,21 +18,26 @@
     home.file."Videos" = {
       enable = true;
       source = config.lib.file.mkOutOfStoreSymlink "/home/mew/data/Videos";
-      target = "/home/mew/videos";
+      target = "/home/mew/Videos";
     };
     home.file."Pictures" = {
       enable = true;
       source = config.lib.file.mkOutOfStoreSymlink "/home/mew/data/Pictures";
-      target = "/home/mew/pictures";
+      target = "/home/mew/Pictures";
     };
     home.file."Games" = {
+      enable = true;
+      source = config.lib.file.mkOutOfStoreSymlink "/home/mew/data/Games";
+      target = "/home/mew/Games";
+    };
+    home.file."games" = {
       enable = true;
       source = config.lib.file.mkOutOfStoreSymlink "/home/mew/data/Games";
       target = "/home/mew/games";
     };
     home.file."Downloads" = {
       enable = true;
-      source = config.lib.file.mkOutOfStoreSymlink "/tmp/downloads";
+      source = config.lib.file.mkOutOfStoreSymlink "/tmp";
       target = "/home/mew/Downloads";
     };
     home.file."noita_gifs" = {

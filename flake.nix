@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    stable.url = "github:nixos/nixpkgs/nixos-23.11";
+    stable.url = "github:NixOS/nixpkgs/nixos-23.11";
 
     nixvim.url = "github:nix-community/nixvim";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
@@ -11,6 +11,9 @@
     # command-not-found workaround
     flake-programs-sqlite.url = "github:wamserma/flake-programs-sqlite";
     flake-programs-sqlite.inputs.nixpkgs.follows = "nixpkgs";
+
+    hoyoverse.url = "github:ezKEa/aagl-gtk-on-nix";
+    hoyoverse.inputs.nixpkgs.follows = "nixpkgs";
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -20,6 +23,9 @@
     prism.url = "github:IogaMaster/prism";
     hyprpicker.url = "github:hyprwm/hyprpicker";
     hyprland-contrib.url = "github:hyprwm/contrib";
+    hyprlock.url = "github:hyprwm/hyprlock";
+    hyprlock.inputs.nixpkgs.follows = "nixpkgs";
+    hypridle.url = "github:hyprwm/hypridle";
 
     nix-colors.url = "github:misterio77/nix-colors";
 
@@ -28,13 +34,13 @@
     impermanence.url = "github:nix-community/impermanence";
     agenix.url = "github:ryantm/agenix";
     bubblewrapper.url = "git+https://git.sr.ht/~cid-chan/bubblewrapper?ref=main";
-    sops-nix.url = "github:Mic92/sops-nix";
+    schizofox.url = "github:schizofox/schizofox";
 
     ags.url = "github:aylur/ags";
     matugen.url = "github:InioX/matugen";
   };
 
-  outputs = inputs@{ self, nixpkgs, stable, home-manager, hyprpicker, hyprland-contrib, impermanence, split-monitor-workspaces, ... }: let
+  outputs = inputs@{ self, nixpkgs, home-manager, hyprpicker, hyprland-contrib, impermanence, split-monitor-workspaces, ... }: let
     system = "x86_64-linux";
   in
   {

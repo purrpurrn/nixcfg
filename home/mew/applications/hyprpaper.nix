@@ -1,7 +1,7 @@
 { config, pkgs, ... }: {
   config = {
     home.packages = [ pkgs.hyprpaper ];
-    home.file."hyprpaper.conf" = {
+    xdg.configFile."hyprpaper.conf" = {
       enable = true;
       target = "/home/mew/.config/hypr/hyprpaper.conf";
       text = ''

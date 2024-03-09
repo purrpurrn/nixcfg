@@ -1,20 +1,24 @@
 { pkgs, config, inputs, ... }: {
   imports = [
-    ./gtk.nix
+    #./gtk.nix
+    ./base16.nix
     ./directories.nix
     ./applications/mpv
     ./applications/prism
+    ./applications/neovim
     ./applications/chromium
     ./applications/bubblewrapper
     ./applications/git.nix
     ./applications/ags.nix
-    ./applications/zsh.nix
+#    ./applications/zsh.nix
     ./applications/fish.nix
     ./applications/btop.nix
     ./applications/kitty.nix
-    ./applications/nixvim.nix
     ./applications/nushell.nix
-    ./applications/hyprpaper.nix
+    ./applications/hyprlock.nix
+    ./applications/hypridle.nix
+#    ./applications/hoyoverse.nix
+#    ./applications/hyprpaper.nix
     ./applications/easyeffects.nix
 #    ./applications/vesktop.nix
 #    ./applications/chrome.nix
@@ -31,6 +35,15 @@
       };
       
       packages = [
+        pkgs.unp
+	pkgs.temurin-bin-21
+	pkgs.p7zip
+	pkgs.unar
+	pkgs.libnotify
+        pkgs.cook-cli
+        pkgs.obs-studio
+        pkgs.heroic
+        pkgs.swaybg
         pkgs.ff2mpv
         pkgs.blender
         pkgs.wl-clipboard

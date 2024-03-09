@@ -38,6 +38,20 @@
       options = [ "bind" ];
     };
 
+  fileSystems."/home/mew/.ssh" =
+    { device = "/nix/persist/home/mew/.ssh";
+      fsType = "none";
+      depends = [ "/nix/persist" ];
+      options = [ "bind" ];
+    };
+
+  fileSystems."/etc/sshd" =
+    { device = "/nix/persist/etc/sshd";
+      fsType = "none";
+      depends = [ "/nix/persist" ];
+      options = [ "bind" ];
+    };
+
   fileSystems."/var/log" =
     { device = "/nix/persist/var/log";
       fsType = "none";
@@ -51,6 +65,7 @@
   };
 
   # Sound/Speaker Settings
+  security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
     wireplumber.enable = true;
@@ -64,6 +79,18 @@
     device = "/dev/nvme0n1p5";
     randomEncryption.enable = true;
   }];
+
+  # vulkan fix
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+    extraPackages = [
+      pkgs.vulkan-loader
+      pkgs.vulkan-validation-layers
+      pkgs.vulkan-extension-layer
+    ];
+  };
 
   networking.useDHCP = lib.mkDefault true;
 

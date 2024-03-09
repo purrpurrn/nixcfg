@@ -1,0 +1,1 @@
+[Nix] Disabling updates already done

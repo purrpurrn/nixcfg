@@ -1,33 +1,26 @@
 { fetchFromGitHub
-, stdenv
+, buildLua
 , lib
+, unstableGitUpdater
 }:
 
-stdenv.mkDerivation {
+buildLua {
   pname = "memo";
-  version = "2023-10-31";
+  version = "0-unstable-2023-10-31";
 
   src = fetchFromGitHub {
     owner = "po5";
     repo = "memo";
     rev = "6f2b036ef860e130ea584657389e0a7ceb4d954f";
-    sha256 = "03rk1f97jblnajgwr36qz7hq1qlxrgkywc0gnq0wwg1vxiga9j4v";
+    hash = "sha256-m8ikXuw7PM4Btg8w7ufLneKA4fnYjMyfVJYueZILMw8=";
   };
-
-  installPhase = ''
-    mkdir -p $out/share/mpv/scripts
-    cp -r memo.lua $out/share/mpv/scripts
-  '';
-
-  dontBuild = true;
-
-  passthru.scriptName = "memo.lua";
+  passthru.updateScript = unstableGitUpdater {};
 
   meta = with lib; {
-    description = "A recent files menu for mpv.";
+    description = "A recent files menu for mpv";
     homepage = "https://github.com/po5/memo";
-    license = licenses.gpl3;
-    #maintainers = with lib.maintainers; [ purrpurrn ];
+    license = licenses.gpl3Only;
+    maintainers = with lib.maintainers; [ purrpurrn ];
   };
 }
 

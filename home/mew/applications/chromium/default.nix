@@ -13,6 +13,7 @@
         pkgs.hunspellDictsChromium.de_DE
       ];
       extensions = [
+        "fnbkeopcpjainobjebddfcnnknmfipid" # Pixiv Downloader
         "cjpalhdlnbpafiamejdnhcphjbkeiagm" # uBlock Origin
         "pncfbmialoiaghdehhbnbhkkgmjanfhe" # uBlacklist
         "gebbhagfogifgggkldgodflihgfeippi" # Return Youtube Dislikes
@@ -22,6 +23,7 @@
 	"kbmfpngjjgdllneeigpgjifpgocmfgmb" # Reddit Enhancement Suite
 	"khncfooichmfjbepaaaebmommgaepoid" # Unhook - Remove YouTube Recommended Videos
 	"ephjcajbkgplkjmelpglennepbpmdpjg" # ff2mpv
+	"dbgeolnmmjmhcfndmmahnpicpmnpibep" # FF: Fuzzy finder for Chrome tabs and windows
       ];
     };
   };
