@@ -8,6 +8,7 @@
 #      hashedPasswordFile = config.age.secrets.mew_password.path;
       extraGroups = [
         "wheel"
+	"video"
       ];
     };
   };

@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ...}: {
+{ config, pkgs, inputs, lib, ...}: {
   imports = [
     ./hardware-configuration.nix
     ./persistence.nix
@@ -33,6 +33,7 @@
        powerKeyLongPress = "reboot";
      };
 
+     services.dbus.packages = [ pkgs.gcr ];
      # Power Management
      powerManagement.enable = true;
      services.tlp.enable = true;
@@ -62,7 +63,11 @@
     environment.systemPackages = [ 
 #      (pkgs.callPackage ../../zep.nix { })
       pkgs.bluez 
-      pkgs.libsForQt5.polkit-kde-agent
+      pkgs.ffmpeg-full
+#      pkgs.libsForQt5.polkit-kde-agent
+      pkgs.mate.mate-polkit
+      pkgs.
+      pkgs.pinentry-qt
       pkgs.killall
       pkgs.jq
       pkgs.btop

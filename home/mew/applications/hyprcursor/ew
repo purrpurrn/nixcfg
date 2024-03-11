@@ -1,0 +1,14 @@
+{ config, pkgs, inputs, ... }: {
+  config = {
+    home.packages = [
+      pkgs.xcur2png
+      inputs.hyprcursor.packages."x86_64-linux".hyprcursor
+    ];
+
+    home.file."HyprBibataModernClassic" = {
+      enable = true;
+      source = ./HyprBibataModernClassic;
+      target = ~/.local/share/
+    };
+  };
+}

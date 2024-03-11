@@ -79,12 +79,12 @@
 	};
 	nvim-cmp = {
           enable = true;
-	  autoEnableSources = true;
-	  sources = [
-            { name = "nvim_lsp"; }
-	    { name = "path"; }
-	    { name = "buffer"; }
-	  ];
+#	  autoEnableSources = true;
+#	  sources = [
+#            { name = "nvim_lsp"; }
+#	    { name = "path"; }
+#	    { name = "buffer"; }
+#	  ];
 	};
       };
       extraPlugins = with pkgs.vimPlugins; [

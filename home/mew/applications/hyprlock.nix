@@ -3,7 +3,7 @@
     home.packages = [ inputs.hyprlock.packages."x86_64-linux".hyprlock ];
     xdg.configFile."hyprlock.conf" = {
       enable = true;
-      target = "/home/mew/.config/hypr/hyprlock.conf";
+      target = "hypr/hyprlock.conf";
       text = ''
         general {
           hide_cursor = true

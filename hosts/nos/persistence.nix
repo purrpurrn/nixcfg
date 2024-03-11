@@ -32,6 +32,8 @@
 	  ".local/share/Steam"
 	  ".local/share/Anki2"
 	  ".local/state/mpv/watch_later"
+	  ".local/share/icons"
+	  ".icons"
 	  "data/Pictures/memes"
 	  "data/Pictures/screenshots"
 	  "data/Pictures/wallpapers"

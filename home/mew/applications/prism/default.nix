@@ -6,7 +6,7 @@
     prism = {
       enable = true;
       wallpapers = ./wallpapers;
-      outPath = "/home/mew/data/Pictures/wallpapers";
+      outPath = "data/Pictures/generated_wallpapers";
       colorscheme = "rose-pine";
     };
   };

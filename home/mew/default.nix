@@ -1,25 +1,28 @@
 { pkgs, config, inputs, ... }: {
   imports = [
     #./gtk.nix
+    ./mail.nix
     ./base16.nix
     ./directories.nix
     ./applications/mpv
     ./applications/prism
     ./applications/neovim
+    ./applications/discord
     ./applications/chromium
     ./applications/bubblewrapper
     ./applications/git.nix
+    ./applications/obs.nix
     ./applications/ags.nix
 #    ./applications/zsh.nix
     ./applications/fish.nix
     ./applications/btop.nix
     ./applications/kitty.nix
-    ./applications/discord.nix
     ./applications/nushell.nix
     ./applications/hyprlock.nix
     ./applications/hypridle.nix
 #    ./applications/hoyoverse.nix
 #    ./applications/hyprpaper.nix
+    #./applications/hyprcursor.nix
     ./applications/easyeffects.nix
 #    ./applications/vesktop.nix
 #    ./applications/chrome.nix
@@ -37,12 +40,15 @@
       
       packages = [
         pkgs.unp
+	pkgs.gpu-screen-recorder
+	pkgs.gpu-screen-recorder-gtk
+	pkgs.pinentry-gnome
+	pkgs.nodejs_21
 	pkgs.temurin-bin-21
 	pkgs.p7zip
 	pkgs.unar
 	pkgs.libnotify
         pkgs.cook-cli
-        pkgs.obs-studio
         pkgs.heroic
         pkgs.swaybg
         pkgs.ff2mpv
@@ -50,6 +56,8 @@
         pkgs.wl-clipboard
         inputs.hyprland-contrib.packages."x86_64-linux".grimblast 
         inputs.hyprpicker.packages."x86_64-linux".hyprpicker
+	inputs.hyprcursor.packages."x86_64-linux".hyprcursor
+	pkgs.pulseaudio
 	pkgs.neofetch
 	pkgs.prismlauncher
 	pkgs.firefox

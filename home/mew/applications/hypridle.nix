@@ -3,7 +3,7 @@
     home.packages = [ inputs.hypridle.packages."x86_64-linux".hypridle ];
     xdg.configFile."hypridle.conf" = {
       enable = true;
-      target = "/home/mew/.config/hypr/hypridle.conf";
+      target = "hypr/hypridle.conf";
       text = ''
         general {
           lock_cmd = hyprlock

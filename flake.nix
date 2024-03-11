@@ -18,7 +18,7 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    hyprland.url = "github:hyprwm/hyprland";
+    hyprland.url = "github:hyprwm/hyprland/66330281ff19e84c986c5ce639b670929e5dadd6";
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
     prism.url = "github:IogaMaster/prism";
     hyprpicker.url = "github:hyprwm/hyprpicker";
@@ -26,6 +26,7 @@
     hyprlock.url = "github:hyprwm/hyprlock";
     hyprlock.inputs.nixpkgs.follows = "nixpkgs";
     hypridle.url = "github:hyprwm/hypridle";
+    hyprcursor.url = "github:hyprwm/hyprcursor/ea1c1ff8973f0326266fa27e6a081b8acd0d306b";
 
     nix-colors.url = "github:misterio77/nix-colors";
 
