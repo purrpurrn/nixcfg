@@ -1,6 +1,6 @@
 { pkgs, config, inputs, ... }: {
   imports = [
-    #./gtk.nix
+    ./gtk.nix
     ./mail.nix
     ./base16.nix
     ./directories.nix
@@ -20,9 +20,9 @@
     ./applications/nushell.nix
     ./applications/hyprlock.nix
     ./applications/hypridle.nix
+    ./applications/streamlink.nix
 #    ./applications/hoyoverse.nix
 #    ./applications/hyprpaper.nix
-    #./applications/hyprcursor.nix
     ./applications/easyeffects.nix
 #    ./applications/vesktop.nix
 #    ./applications/chrome.nix
@@ -39,14 +39,14 @@
       };
       
       packages = [
+        inputs.nh.packages."x86_64-linux".default
         pkgs.unp
 	pkgs.gpu-screen-recorder
 	pkgs.gpu-screen-recorder-gtk
-	pkgs.pinentry-gnome
 	pkgs.nodejs_21
-	pkgs.temurin-bin-21
 	pkgs.p7zip
 	pkgs.unar
+	pkgs.pciutils
 	pkgs.libnotify
         pkgs.cook-cli
         pkgs.heroic
@@ -59,7 +59,7 @@
 	inputs.hyprcursor.packages."x86_64-linux".hyprcursor
 	pkgs.pulseaudio
 	pkgs.neofetch
-	pkgs.prismlauncher
+	(pkgs.prismlauncher.override { jdks = [ pkgs.temurin-bin-21 pkgs.temurin-bin-8 pkgs.temurin-bin-17 ]; })
 	pkgs.firefox
 	pkgs.krita
 	pkgs.kitty
@@ -71,6 +71,7 @@
 	pkgs.yt-dlp
 	pkgs.scrcpy
 	pkgs.anki
+	pkgs.azpainter
 	(pkgs.callPackage ../../common/pomo.nix {})
       ];
     };

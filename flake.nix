@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     stable.url = "github:NixOS/nixpkgs/nixos-23.11";
+    nh.url = "github:viperML/nh";
 
     nixvim.url = "github:nix-community/nixvim";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
@@ -18,7 +19,7 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    hyprland.url = "github:hyprwm/hyprland/66330281ff19e84c986c5ce639b670929e5dadd6";
+    hyprland.url = "github:hyprwm/hyprland/ae17e900e720430c7848faf1b6e21b5f352c26ca";
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
     prism.url = "github:IogaMaster/prism";
     hyprpicker.url = "github:hyprwm/hyprpicker";
@@ -26,7 +27,8 @@
     hyprlock.url = "github:hyprwm/hyprlock";
     hyprlock.inputs.nixpkgs.follows = "nixpkgs";
     hypridle.url = "github:hyprwm/hypridle";
-    hyprcursor.url = "github:hyprwm/hyprcursor/ea1c1ff8973f0326266fa27e6a081b8acd0d306b";
+    hyprcursor.url = "github:hyprwm/hyprcursor/1a1fcfb58db580f32a5e1ac1963b78c2cc1379e3";
+    hyprcursor.inputs.nixpkgs.follows = "nixpkgs";
 
     nix-colors.url = "github:misterio77/nix-colors";
 

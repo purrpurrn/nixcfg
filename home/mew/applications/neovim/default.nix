@@ -2,7 +2,7 @@
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
     ./noice.nix
-    ./notify.nix
+#    ./notify.nix
     ./lualine.nix
   ];
   config = {

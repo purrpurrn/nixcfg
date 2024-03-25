@@ -52,5 +52,10 @@ in {
       source = config.lib.file.mkOutOfStoreSymlink "./applications/prism/wallpapers";
       target = "${homeDirectory}/data/Pictures/wallpapers";
     };
+    home.file."music" = {
+      enable = false;
+      source = config.lib.file.mkOutOfStoreSymlink "${homeDirectory}/data/music";
+      target = "${homeDirectory}/music";
+    };
   };
 }

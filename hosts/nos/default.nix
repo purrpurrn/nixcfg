@@ -3,10 +3,12 @@
     ./hardware-configuration.nix
     ./persistence.nix
     ./openssh.nix
-    ../../users/mew.nix
+    ../../common/miniflux.nix
+    ../../users.nix
 #    ../../common/kde.nix
     ../../common/1password.nix
     ../../common/steam.nix
+    ../../common/VM.nix
     ../../common/gtk.nix
 #    ../../common/gnome.nix
     ../../common/hyprland.nix
@@ -67,7 +69,6 @@
 #      pkgs.libsForQt5.polkit-kde-agent
       pkgs.mate.mate-polkit
       pkgs.
-      pkgs.pinentry-qt
       pkgs.killall
       pkgs.jq
       pkgs.btop

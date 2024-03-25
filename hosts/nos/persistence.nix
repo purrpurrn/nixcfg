@@ -18,7 +18,6 @@
         directories = [
           ".config/hypr"
           ".config/ags"
-	  ".config/google-chrome" # remove
 	  ".config/chromium"
 	  ".config/1Password"
 	  ".config/steamguard-cli"
@@ -26,6 +25,7 @@
 	  ".config/obsidian"
 	  ".config/sops/age"
 	  ".config/heroic"
+	  ".config/discordWebConfig"
 	  ".1password"
 	  ".ssh"
 	  ".local/share/PrismLauncher"
@@ -39,6 +39,7 @@
 	  "data/Pictures/wallpapers"
 	  "data/Pictures/other"
 	  "data/Videos"
+	  "data/music"
 	  "data/recordings"
 	  "data/Games/OMORI"
 	  "data/Games/Heroic"

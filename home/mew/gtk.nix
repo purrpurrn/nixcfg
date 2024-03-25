@@ -5,7 +5,7 @@
     gtk = {
       enable = true;
       # Cursor
-      cursorTheme.name = "Bibata-Modern-Ice";
+      cursorTheme.name = "Bibata-Modern-Classic";
       cursorTheme.package = pkgs.bibata-cursors;
 
       theme.name = "adw-gtk3";
